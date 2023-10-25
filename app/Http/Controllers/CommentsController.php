@@ -31,8 +31,6 @@ class CommentsController extends Controller
     {
         $greeting = ['おはよう', 'こんにちは', 'こんばんは', 'おやすみ'];
         shuffle($greeting);
-        foreach ($greeting as $greeting) {
-        }
         return view('comments.shuffle', ['greeting' => $greeting]);
     }
 }
