@@ -28,11 +28,10 @@ class CommentsController extends Controller
         return view('comments.freeword', ['msg' => $msg]);
     }
     public function shuffle()
-    {
-        $greeting = ['おはよう', 'こんにちは', 'こんばんは', 'おやすみ'];
-        shuffle($greeting);
-        foreach ($greeting as $greeting) {
-        }
-        return view('comments.shuffle', ['greeting' => $greeting]);
-    }
+{
+    $greeting = ['おはよう', 'こんにちは', 'こんばんは', 'おやすみ'];
+    shuffle($greeting);
+    $selectedGreeting = $greeting[0];
+    return view('comments.shuffle', ['selectedGreeting' => $selectedGreeting]);
+}
 }

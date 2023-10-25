@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>ランダムなメッセージ</h1>
-    <h2>{{ $greeting }}</h2>
+    <h2>{{ $selectedGreeting }}</h2>
 </body>
 </html>
