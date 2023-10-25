@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\CommentsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +16,27 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get(
+    '/controller/shuffle',
+    [CommentsController::class, 'shuffle']
+);
+Route::get(
+    '/controller/morning',
+    [CommentsController::class, 'morning']
+);
+Route::get(
+    '/controller/afternoon',
+    [CommentsController::class, 'afternoon']
+);
+Route::get(
+    '/controller/evening',
+    [CommentsController::class, 'evening']
+);
+Route::get(
+    '/controller/night',
+    [CommentsController::class, 'night']
+);
+Route::get(
+    '/controller/{msg}',
+    [CommentsController::class, 'freeword']
+);
